@@ -46,4 +46,9 @@ def receive():
         broadcast(f'{nickname} joined the chat'.encode('ascii'))
         client.send('Connected to the server!'.encode('ascii'))
 
-        thread =
+        thread = threading.Thread(target=handle, args=(client,))
+        thread.start()
+
+print('Robchat server is listening...')
+receive()
+
