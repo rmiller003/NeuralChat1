@@ -1,3 +1,5 @@
+# This is the Robchat client
+
 import socket
 import threading
 
